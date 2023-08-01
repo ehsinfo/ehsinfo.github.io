@@ -15,6 +15,23 @@
 	<title>很抱歉，已无法找到，可返回首页搜索相关内容</title>
 </head>
 <body>
-	<script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="UTF-8" homePageName="返回首页" homePageUrl="/"></script>
+    <h1>这是一個不存在的页面</h1>
+    <p>对不起，您所访问的页面不存在或者已删除。</p>
+    <p>预计将在约 <span id="timeout">5</span> 秒后返回首页。</p>
+    <p>当然，你可以<strong><a href="https://ehsinfo.cn/">直接返回首页。</p>
+<script>
+let countTime = 5;
+function count() {
+  document.getElementById('timeout').textContent = countTime;
+  countTime -= 1;
+  if(countTime === 0){
+    location.href = 'https://ehsinfo.cn/';
+  }
+  setTimeout(() => {
+    count();
+  }, 1000);
+}
+count();
+</script>
 </body>
 </html>
